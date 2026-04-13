@@ -2,6 +2,7 @@ import {
  Container,
  Paper,
  Stack,
+ Group,
  Divider,
  SegmentedControl,
  Text,
@@ -10,6 +11,7 @@ import {
 import { TodoHeader } from "./components/TodoHeader";
 import { TodoInput } from "./components/TodoInput";
 import { TodoItem } from "./components/TodoItem";
+import { ThemeToggle } from "./components/ThemeToggle";
 import { useAppSelector, useAppDispatch } from "./store/hooks";
 import { setFilter, type TodoFilter } from "./store/todoSlice";
 
@@ -28,6 +30,9 @@ function App() {
 
  return (
   <Container size="xs" py={40}>
+   <Group justify="flex-end" mb="md">
+    <ThemeToggle />
+   </Group>
    <Paper withBorder shadow="md" p="xl" radius="md">
     <Stack gap="lg">
      <TodoHeader total={todos.length} completed={completedCount} />
@@ -38,13 +43,8 @@ function App() {
       fullWidth
       value={currentFilter}
       onChange={(val) => dispatch(setFilter(val as TodoFilter))}
-        styles={{
-        label: {
-            color:"#173463"
-        }
-      }}
       data={[
-       { label: "Все", value: "all"},
+       { label: "Все", value: "all" },
        { label: "Активные", value: "active" },
        { label: "Выполненные", value: "done" },
       ]}
