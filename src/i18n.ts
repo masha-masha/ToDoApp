@@ -12,7 +12,9 @@ const resources = {
       active: "Актыўныя",
       done: "Гатовыя",
       empty: "Задач пакуль няма",
-      itemsLeft: "Выканана {{completed}} з {{total}} задач"
+      itemsLeft: "Выканана {{completed}} з {{total}} задач",
+      footerMadeBy: "Аўтар: Маша.Б",
+      footerSourceCode: "Зыходны код"
     }
   },
   ru: {
@@ -23,7 +25,9 @@ const resources = {
       active: "Активные",
       done: "Готовы",
       empty: "Задач пока нет",
-      itemsLeft: "Выполнено {{completed}} из {{total}} задач"
+      itemsLeft: "Выполнено {{completed}} из {{total}} задач",
+      footerMadeBy: "Автор: Маша.Б",
+      footerSourceCode: "Исходный код"
     }
   },
   en: {
@@ -34,7 +38,9 @@ const resources = {
       active: "Active",
       done: "Done",
       empty: "No tasks yet",
-      itemsLeft: "Completed {{completed}} of {{total}} tasks"
+      itemsLeft: "Completed {{completed}} of {{total}} tasks",
+      footerMadeBy: "Author: Masha.B",
+      footerSourceCode: "Source code"
     }
   }
 };

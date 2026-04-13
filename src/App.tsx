@@ -14,6 +14,7 @@ import { TodoInput } from "./components/TodoInput";
 import { TodoItem } from "./components/TodoItem";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { LanguagePicker } from "./components/LanguagePicker";
+import { Footer } from "./components/Footer";
 import { useAppSelector, useAppDispatch } from "./store/hooks";
 import { setFilter, type TodoFilter } from "./store/todoSlice";
 
@@ -65,6 +66,7 @@ function App() {
      </Stack>
     </Stack>
    </Paper>
+   <Footer/>
   </Container>
  );
 }
