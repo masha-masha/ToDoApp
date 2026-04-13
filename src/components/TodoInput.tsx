@@ -3,8 +3,10 @@ import { PlusIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { useAppDispatch } from "../store/hooks";
 import { addTodo } from "../store/todoSlice";
+import { useTranslation } from 'react-i18next'; 
 
 export const TodoInput = () => {
+ const { t } = useTranslation(); 
  const [value, setValue] = useState("");
  const dispatch = useAppDispatch();
 
@@ -18,7 +20,7 @@ export const TodoInput = () => {
  return (
   <Group gap="xs">
    <TextInput
-    placeholder="Введите задачу"
+    placeholder={t('inputPlaceholder')} 
     flex={1}
     value={value}
     onChange={(e) => setValue(e.currentTarget.value)}
