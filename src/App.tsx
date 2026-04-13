@@ -2,7 +2,6 @@ import {
  Container,
  Paper,
  Stack,
- Group,
  Divider,
  SegmentedControl,
  Text,
